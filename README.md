@@ -11,23 +11,6 @@
 3. **读取数据**：将下载的测试集 A 放到 Excel 中进行筛选等处理，再利用爬虫技术将 Excel 转换为 txt 格式，使用 Eclipse 进行开发并将数据上传到 HDFS。
 4. **计算数据**：分别对贷款等级 grade 所对应贷款人的贷款金额 loanAmnt 和贷款人年收入 annualIncome 的累加。
 
-## 目录结构
-
-```text
-Hadoop/
-├── readme.md                                       本文档
-├── 2006110227-李晶玉-Hadoop平台综合实践报告.doc       实验报告
-└── 2006110227-李晶玉/                              Eclipse Java 项目
-    ├── .classpath                                  Eclipse 类路径，引用 D:/hadoop-3.2.3 下的 jar
-    ├── .project                                    Eclipse 项目描述，带 Hadoop 插件 Nature
-    ├── bin/ljy/*.class                             编译产物
-    └── src/ljy/
-        ├── driver.java                             MapReduce 作业入口
-        ├── mapper.java                             Mapper：按等级分组输出贷款金额和年收入
-        ├── reducer.java                            Reducer：按等级累加贷款金额和年收入
-        └── Two.java                                自定义 Writable，封装金额和年收入两个字段
-```
-
 ## 开发环境
 
 - 操作系统：阿里云 Linux 服务器
